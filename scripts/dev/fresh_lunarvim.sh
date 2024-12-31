@@ -1,6 +1,9 @@
 #!/bin/sh
 FRESHLOGS=$1
 EXTRADIR=$2
+if [ -z "$1" ]; then
+  FRESHLOGS="/var/log/freshinstaller"
+fi
 
 echo "Installing LunarVim!" >> $FRESHLOGS
 {

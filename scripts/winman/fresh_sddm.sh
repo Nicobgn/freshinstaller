@@ -1,6 +1,9 @@
 #!/bin/sh
 FRESHLOGS=$1
 theme=$2
+if [ -z "$1" ]; then
+  FRESHLOGS="/var/log/freshinstaller"
+fi
 
 if [ -z "$2" ]; then
   echo "You forgot to tell which theme do you want."

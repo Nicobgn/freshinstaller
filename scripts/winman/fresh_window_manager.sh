@@ -4,6 +4,9 @@ FRESHLOGS=$1
 whichwm=$2
 display_server=$3
 wantsddm=$4
+if [ -z "$1" ]; then
+  FRESHLOGS="/var/log/freshinstaller"
+fi
 
 if [[ -z "$2" ]]; then
   echo "1. Qtile"

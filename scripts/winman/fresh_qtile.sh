@@ -1,6 +1,9 @@
 #!/bin/sh
 FRESHLOGS=$1
 display_server=$2
+if [ -z "$1" ]; then
+  FRESHLOGS="/var/log/freshinstaller"
+fi
 
 echo "Installing Qtile and the chosen Display Server..." >> $FRESHLOGS
 {
