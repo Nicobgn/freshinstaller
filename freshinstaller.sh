@@ -60,3 +60,5 @@ export NVM_DIR="$EXTRADIR/nvm" && (
 rustup install stable
 nvm install --lts
 
+sudo systemctl enable sddm
+
