@@ -4,7 +4,7 @@ I need so I created some scripts to run on a fresh install.
 
 Before anyone send something, yes, I have some dotfiles but \
 I will not share them since I can leak some password or something \
-by accident so... \
+by accident so... 
 
 I hope this would help someone lazy like me lol.
 
@@ -18,6 +18,7 @@ and languages, such as:
 | IDE | [LunarVim](https://www.lunarvim.org) |
 | Language | [NodeJS](https://nodejs.org/) |
 | Language | [Rust](https://www.rust-lang.org/) |
+| Framework | [Tauri](https://v2.tauri.app) |
 
 ## Window Managers
 The script also offers the user to install a few Window Managers:

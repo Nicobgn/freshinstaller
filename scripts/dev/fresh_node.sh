@@ -4,6 +4,9 @@ EXTRADIR=$2
 if [ -z "$1" ]; then
   FRESHLOGS="/var/log/freshinstaller"
 fi
+if [ -z "$2" ]; then
+  EXTRADIR="$HOME/.local/extra"
+fi
 
 {
   export NVM_DIR="$EXTRADIR/nvm" && (

@@ -10,8 +10,9 @@ fi
 
 echo "Installing everything that we would need" >> $FRESHLOGS
 {
-  sudo pacman -S --needed \
-    grub os-prober efibootmgr networkmanager bluez git \
+  sudo pacman -S --needed --noconfirm \
+    grub os-prober efibootmgr networkmanager \
+    base-devel bluez git openssl curl wget \
     vim neovim tree ttf-firacode-nerd noto-fonts-cjk
 } >> $FRESHLOGS 2>&1
 ./notifier.sh "Everything was installed, and you can see it on $FRESHLOGS!"

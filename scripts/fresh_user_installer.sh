@@ -61,7 +61,7 @@ else
   fi
 
   if [[ "$rustdev" == "yes" ]] || [[ "$rustdev" == "y" ]]; then
-    ./dev/fresh_rustdev.sh $FRESHLOGS
+    ./dev/fresh_rust.sh $FRESHLOGS
   fi
 
   if [ -z "$5" ]; then
