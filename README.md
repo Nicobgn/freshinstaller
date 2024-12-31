@@ -1,6 +1,6 @@
-# Fresh Install Script
+# Fresh Install Scripts
 I'm too lazy to search for every single package that \
-I need so I created a script to run on a fresh install. 
+I need so I created some scripts to run on a fresh install. 
 
 Before anyone send something, yes, I have some dotfiles but \
 I will not share them since I can leak some password or something \
@@ -9,7 +9,7 @@ by accident so... \
 I hope this would help someone lazy like me lol.
 
 ## Development
-The scripts also offers installation of a few development tools \
+The scripts offers installation of a few development tools \
 and languages, such as:
 | Type | Name |
 | ---- | ---- |
@@ -20,7 +20,7 @@ and languages, such as:
 | Language | [Rust](https://www.rust-lang.org/) |
 
 ## Window Managers
-The script offers the user to install a few Window Managers:
+The script also offers the user to install a few Window Managers:
 | Type | Name |
 | ---- | ---- |
 | Tiling | [Qtile](https://qtile.org) |
