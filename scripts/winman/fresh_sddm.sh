@@ -36,7 +36,6 @@ if [ "$theme" == "1" ]; then
 
   ../notifier.sh "Sugar Candy theme is installed!"
   ../notifier.sh "Enable it by editing /etc/sddm.conf!"
-
 elif [ "$theme" == "2"]; then
   echo "You choosed Chili theme" >> $FRESHLOGS
   {
