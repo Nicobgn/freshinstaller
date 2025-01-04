@@ -28,9 +28,11 @@ The script also offers the user to install a few Window Managers:
 
 And you can choose if you want X11 or Wayland (if possible)!
 
+## User Experience
 It also will install some programs for a better user experience:
 | Type | Name |
 | ---- | ---- |
+| Boot loader | [GNU GRUB](https://www.gnu.org/software/grub/) |
 | Browser | [Vivaldi](https://vivaldi.com) |
 | Compositor | [Picom](https://github.com/yshui/picom) |
 | Image Viewer | [Feh](https://wiki.archlinux.org/title/Feh)
@@ -41,4 +43,9 @@ It also will install some programs for a better user experience:
 | Menu | Pavucontrol |
 | Miscellaneous | [Unclutter](https://github.com/Airblader/unclutter-xfixes) |
 | Notifications | [Dunst](https://dunst-project.org) |
+
+If you choose to use grub, you can also install some themes!
+
+##### If you install a theme, yet you will have to enable it.
+This last message applies for every theme you can select, SDDM, GRUB, or anything else. The script will only install it.
 
