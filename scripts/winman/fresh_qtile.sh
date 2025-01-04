@@ -10,7 +10,15 @@ echo "Installing Qtile and the chosen Display Server..." >> $FRESHLOGS
 sudo pacman -S --needed --noconfirm \
   qtile python-distutils-extra >> $FRESHLOGS 2>&1
 
-if [[ "$display_server" == "2" ]]; then
+if [ -z "$2" ]; then
+  echo "Which display server do you want?"
+  echo "1. X11"
+  echo "2. Wayland"
+  read -p "Please, choose a number: " input_value
+  display_server="$input_value"
+fi
+
+if [ "$display_server" = "2" ]; then
   sudo pacman -S --needed --noconfirm \
     wlroots python-pywlroots python-pywayland python-xkbcommon\
     wofi >> $FRESHLOGS 2>&1

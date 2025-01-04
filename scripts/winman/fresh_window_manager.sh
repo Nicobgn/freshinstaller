@@ -30,7 +30,7 @@ fi
   libxdamage at-spi2-core
 } >> $FRESHLOGS 2>&1
 
-if [[ "$whichwm" == "1" ]]; then
+if [[ "$whichwm" = "1" ]]; then
   echo "Installing Qtile and the chosen Display Server"
   ./fresh_qtile.sh $FRESHLOGS
   
@@ -44,7 +44,7 @@ if [ -z $4 ]; then
   wantsddm="$input_value"
 fi
 
-if [[ "$wantsddm" == "yes" ]] || [[ "$wantsddm" == "y" ]]; then
+if [[ "$wantsddm" = "yes" ]] || [[ "$wantsddm" = "y" ]]; then
   ../fresh_sddm.sh
 fi
 

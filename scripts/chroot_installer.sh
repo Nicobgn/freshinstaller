@@ -25,7 +25,7 @@ if [ -z $1]; then
   grubi="$input_value"
 fi
 
-if [[ "$grubi" == "y" ]] || [[ "$grubi" == "yes" ]]; then
+if [[ "$grubi" = "y" ]] || [[ "$grubi" = "yes" ]]; then
   if [ -z "$2" ]; then
     read -p "Which is your EFI directory?: " input_value
     efi_directory="$input_value"
