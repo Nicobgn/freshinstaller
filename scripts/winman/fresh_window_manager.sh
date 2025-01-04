@@ -31,11 +31,11 @@ fi
 } >> $FRESHLOGS 2>&1
 
 if [[ "$whichwm" == "1" ]]; then
-  ../notifier.sh "Installing Qtile and the chosen Display Server"
+  echo "Installing Qtile and the chosen Display Server"
   ./fresh_qtile.sh $FRESHLOGS
   
-  ../notifier.sh "Everything in order to use qtile is installed!"
-  ../notifier.sh "Let's proceed with the session manager (SDDM)!"
+  echo "Everything in order to use qtile is installed!"
+  echo "Let's proceed with the session manager (SDDM)!"
 fi
 
 

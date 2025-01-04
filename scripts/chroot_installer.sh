@@ -9,16 +9,15 @@ if [[ ! -d "/var/log" ]]; then
 fi
 
 echo "Installing everything that we would need" >> $FRESHLOGS
-{
-  sudo pacman -S --needed --noconfirm \
-    grub os-prober efibootmgr networkmanager \
-    base-devel bluez git openssl curl wget \
-    vim neovim tree ttf-firacode-nerd noto-fonts-cjk
-} >> $FRESHLOGS 2>&1
-./notifier.sh "Everything was installed, and you can see it on $FRESHLOGS!"
 
-./notifier.sh "The next part is to install grub, we will install it on the EFI way, skip it if you need it."
-./notifier.sh "The script will wait 10 seconds before continue, in case of you need to cancel."
+sudo pacman -S --needed --noconfirm \
+  grub os-prober efibootmgr networkmanager \
+  base-devel bluez git openssl curl wget \
+  vim neovim tree ttf-firacode-nerd noto-fonts-cjk >> $FRESHLOGS 2>&1
+echo "Everything was installed, and you can see it on $FRESHLOGS!"
+
+echo "The next part is to install grub, we will install it on the EFI way, skip it if you need it."
+echo "The script will wait 10 seconds before continue, in case of you need to cancel."
 sleep 10
 
 if [ -z $1]; then
@@ -42,10 +41,10 @@ if [[ "$grubi" == "y" ]] || [[ "$grubi" == "yes" ]]; then
   grub-install --target=x86_64-efi --efi-directory=$efi_directory --bootloader-id=$bootloader_id
 fi
 
-./notifier.sh "The next part is not meant to be run as root"
-./notifier.sh "Also, it wont work properly if you haven't booted on Arch."
-./notifier.sh "We recommend you to skip it if you dont meet the conditions."
-./notifier.sh "We will let you 10 seconds to cancel it if you need."
+echo "The next part is not meant to be run as root"
+echo "Also, it wont work properly if you haven't booted on Arch."
+echo "We recommend you to skip it if you dont meet the conditions."
+echo "We will let you 10 seconds to cancel it if you need."
 
 sleep 10
 

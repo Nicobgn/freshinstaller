@@ -19,9 +19,13 @@ if [ -z "$2" ]; then
   repo="$input_value"
 fi
 
-if [ "$repo" == "1" ]; then
-  git clone https://github.com/vinceliuice/Elegant-grub2-themes.git /tmp/grub-theme
+if [ -d "/tmp/grub-theme" ]; then
+  rm -rf "/tmp/grub-theme"
+fi
 
+if [ "$repo" == "1" ]; then
+  git clone https://github.com/vinceliuice/Elegant-grub2-themes.git /tmp/grub-theme >> $FRESHLOGS 2>&1
+  
   if [ -z "$3" ]; then
     echo "Which theme do you want?"
     echo "Forest"
@@ -67,10 +71,10 @@ if [ "$repo" == "1" ]; then
     color="$input_value"
   fi
 
-  source /tmp/grub-theme/install.sh -t "$theme" -p "$style" -i "$side" -c "$color" -s $screensize -b
+  sudo /tmp/grub-theme/install.sh -t "$theme" -p "$style" -i "$side" -c "$color" -s $screensize -b >> $FRESHLOGS 2>&1
 
 elif [ "$repo" == "2" ]; then
-  git clone https://github.com/vinceliuice/grub2-themes.git /tmp/grub-theme
+  git clone https://github.com/vinceliuice/grub2-themes.git /tmp/grub-theme >> $FRESHLOGS 2>&1
 
   if [ -z "$3" ]; then
     echo "Which theme do you want?"
@@ -102,6 +106,6 @@ elif [ "$repo" == "2" ]; then
     screensize="$input_value"
   fi
 
-  source /tmp/grub-theme/install.sh -t "$theme" -i "$style" -s "$screensize" -b
+  sudo /tmp/grub-theme/install.sh -t "$theme" -i "$style" -s "$screensize" -b >> $FRESHLOGS 2>&1
 fi
 

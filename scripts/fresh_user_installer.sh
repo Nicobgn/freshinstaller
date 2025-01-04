@@ -32,8 +32,8 @@ echo "Installing Yet Another Yogurt (yay)" >> $FRESHLOGS
   cd /tmp/yay && makepkg -si
   cd /
 } >> $FRESHLOGS 2>&1
-./notifier.sh "Yet Another Yogurt was installed."
-./notifier.sh "Ensure it was succeeded on $FRESHLOGS!"
+echo "Yet Another Yogurt was installed."
+echo "Ensure it was succeeded on $FRESHLOGS!"
 
 if [ -z "$2" ]; then
   read -p "Do you want to install z shell? (yes/no): " input_value
